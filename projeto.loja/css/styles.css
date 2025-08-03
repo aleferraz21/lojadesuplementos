@@ -1,0 +1,88 @@
+h1 {
+    background: #121212;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    border-radius: 10px;
+    letter-spacing: 7px;
+}
+h1{
+    font-size: 2.5em;
+    display: flex;
+    gap: 10px;
+}
+.palavra-animada {
+    position: relative;
+    height: 1.2em;
+    overflow: hidden;
+}
+.palavra-animada .lista{
+    display: flex;
+    flex-direction: column;
+    animation: subirPalavras 9s infinite;
+}
+.lista span {
+    height: 1.2em;
+    transition: transform 0.5s ease-in-out;
+    color: rgb(255, 166, 0);
+}
+@keyframes subirPalavras {
+    0%, 20%{ transform: translateY(0); }
+    25%, 45%{ transform: translateY(-1.2em); }
+    50%, 70%{ transform: translateY(-2.4em); }
+    75%, 95%{ transform: translateY(-3.6em); }
+    100% { transform: translateY(0);}
+}
+/* Botão de voltar padrão para todas as páginas */
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-voltar:hover, .btn-voltar:focus {
+    background-color: #ff9800;
+    color: #121212;
+    transform: scale(1.07);
+}
+
+/* altera a imagem dos produtos de todas as paginas */
+.img1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Espaço entre as imagens */
+    margin: 20px 0;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.img1 img {
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid #121212;
+    transition: 
+        transform 0.4s cubic-bezier(.25,.8,.25,1),
+        box-shadow 0.4s cubic-bezier(.25,.8,.25,1),
+        filter 0.4s;
+    cursor: zoom-in;
+    margin: 0;
+}
+
+.img1 img:hover {
+    transform: scale(1.12) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,166,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
+    filter: brightness(1.08) contrast(1.1);
+    z-index: 2;
+}
