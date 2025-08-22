@@ -1,0 +1,175 @@
+
+        /* Estilos Globais e Reset */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Fundo preto */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .recipiente {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Estilos do Cabeçalho e Título */
+        header {
+            background-color: #000000;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h2 {
+            color: #ffbb01; /* Amarelo */
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        header p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+
+        /* Botão de Voltar */
+        .botao-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffbb01; /* Amarelo */
+            color: #121212; /* Preto */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 20px;
+        }
+
+        .botao-voltar:hover, .botao-voltar:focus {
+            background-color: #ffffff; /* Branco no hover para contraste */
+            transform: scale(1.05);
+        }
+
+        /* Seção Principal de Produtos */
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #212121; /* Cinza escuro para a área principal */
+        }
+        
+        .lista-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .cartao-produto {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .cartao-produto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(255, 187, 1, 0.2);
+        }
+
+        .cartao-produto h2, .cartao-produto h3 {
+            color: #ffbb01;
+            margin-top: 0;
+        }
+
+        .cartao-produto h3 {
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+
+        .cartao-produto p {
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        .cartao-produto ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            color: #cccccc;
+        }
+
+        .cartao-produto ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        .cartao-produto ul li::before {
+            content: '•';
+            color: #ffbb01; /* Amarelo */
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+        }
+
+        .cartao-produto .preco {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffbb01;
+            margin-top: 20px;
+        }
+
+        .recipiente-imagem {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .recipiente-imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ffbb01;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recipiente-imagem img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 187, 1, 0.5);
+        }
+
+        /* Estilos para o Rodapé */
+        footer {
+            background-color: #000000;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .lista-produtos {
+                grid-template-columns: 1fr;
+            }
+            .cartao-produto {
+                padding: 15px;
+            }
+        }
+    
