@@ -9,6 +9,7 @@ h1 {
     margin: 0;
     border-radius: 10px;
     letter-spacing: 7px;
+    border: #f9f9f9 2px solid;
 }
 h1{
     font-size: 2.5em;
@@ -28,7 +29,7 @@ h1{
 .lista span {
     height: 1.2em;
     transition: transform 0.5s ease-in-out;
-    color: rgb(255, 166, 0);
+    color: rgb(255, 0, 0);
    
 }
 @keyframes subirPalavras {
@@ -38,6 +39,47 @@ h1{
     75%, 95%{ transform: translateY(-3.6em); }
     100% { transform: translateY(0);}
 }
+h2 {
+    background: #000000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin: 10px 0;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    border: #f9f9f9 2px solid;
+}
+h2 {
+    font-size: 2em;
+    display: flex;
+    gap: 10px;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    margin-top: 12px;
+    font-size: 1em;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 20px;
+    margin: 10px;
+    border: #ff0000 3px solid;
+    height: 50px;
+    margin-top: 20px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+
 /* Botão de voltar padrão para todas as páginas */
 .btn-voltar {
     display: inline-block;
@@ -57,53 +99,21 @@ h1{
     transform: scale(1.07);
 }
 
-/* altera a imagem dos produtos de todas as paginas */
-.img1 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px; /* Espaço entre as imagens */
-    margin: 20px 0;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-}
 
-.img1 img {
-    width: 300px;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    border: 2px solid #121212;
-    transition: 
-        transform 0.4s cubic-bezier(.25,.8,.25,1),
-        box-shadow 0.4s cubic-bezier(.25,.8,.25,1),
-        filter 0.4s;
-    cursor: zoom-in;
-    margin: 0;
-}
-
-.img1 img:hover {
-    transform: scale(1.12) rotate(-2deg);
-    box-shadow: 0 8px 32px rgba(255,166,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
-    filter: brightness(1.08) contrast(1.1);
-    z-index: 2;
-}
 .listas {
     display: flex;
     gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 nav {
     background-color: #121212;
-    padding: 18px 10px;
+    padding: 10px 10px;
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.267);
     margin-bottom: 20px;
-    width: 800px;
-    
-    
+    width: 800px;    
 }
 
 nav ul {
@@ -128,7 +138,7 @@ nav ul li a {
     font-size: 1.2em;
     padding: 12px 0;
     border-radius: 8px;
-    background: #ffbb01;
+    background: #d80202;
     text-align: center;
     transition:
         color 0.3s,
@@ -176,17 +186,10 @@ nav ul li a:focus::before {
     opacity: 1;
     box-shadow: 0 0 12px 4px #fff;
 }
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
-    color: #000000;
-    text-align: center;
-    margin-top: 20px;
-    padding: 0 20px;
-}
+
 .logo-titulo {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     margin-right: 16px;
     vertical-align: middle;
@@ -211,4 +214,32 @@ p {
     box-shadow: 0 12px 36px #fff8, 0 4px 16px #0003;
     filter: brightness(1.2) drop-shadow(0 0 24px #fff);
     animation: none;
+}
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+body {
+    background-image: url('../imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.pesquisa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    width: 20%;
 }
