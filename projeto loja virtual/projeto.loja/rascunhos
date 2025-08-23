@@ -1,0 +1,15 @@
+
+.botaoComprar {
+    background-color: #29f002;
+    color: #fff;
+    height: 55px;
+    width: 100%;
+    max-width: 261px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
