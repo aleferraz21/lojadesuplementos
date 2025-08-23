@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1 {
     background: #000000;
     color: #fff;
@@ -305,4 +306,250 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Adiciona o sublinhado no hover */
+=======
+h1 {
+    background: #000000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    border-radius: 10px;
+    letter-spacing: 7px;
+    border: #f9f9f9 2px solid;
+}
+h1{
+    font-size: 2.5em;
+    display: flex;
+    gap: 10px;
+}
+.palavra-animada {
+    position: relative;
+    height: 1.2em;
+    overflow: hidden;
+}
+.palavra-animada .lista{
+    display: flex;
+    flex-direction: column;
+    animation: subirPalavras 9s infinite;
+}
+.lista span {
+    height: 1.2em;
+    transition: transform 0.5s ease-in-out;
+    color: rgb(255, 0, 0);
+   
+}
+@keyframes subirPalavras {
+    0%, 20%{ transform: translateY(0); }
+    25%, 45%{ transform: translateY(-1.2em); }
+    50%, 70%{ transform: translateY(-2.4em); }
+    75%, 95%{ transform: translateY(-3.6em); }
+    100% { transform: translateY(0);}
+}
+h2 {
+    background: #000000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    margin: 10px 0;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    border: #f9f9f9 2px solid;
+}
+h2 {
+    font-size: 2em;
+    display: flex;
+    gap: 10px;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    margin-top: 12px;
+    font-size: 1em;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 20px;
+    margin: 10px;
+    border: #ff0000 3px solid;
+    height: 50px;
+    margin-top: 20px;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+
+/* Botão de voltar padrão para todas as páginas */
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-voltar:hover, .btn-voltar:focus {
+    background-color: #ff9800;
+    color: #121212;
+    transform: scale(1.07);
+}
+
+
+.listas {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #121212;
+    padding: 10px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.267);
+    margin-bottom: 20px;
+    width: 800px;    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+}
+
+nav ul li {
+    margin: 0;
+    position: relative;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 12px 0;
+    border-radius: 8px;
+    background: #d80202;
+    text-align: center;
+    transition:
+        color 0.3s,
+        background 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s,
+        letter-spacing 0.3s;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px #0002;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #121212;
+    background: #ffffff;
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 8px 32px #ff980044;
+    letter-spacing: 2px;
+}
+
+nav ul li a:hover::before,
+nav ul li a:focus::before {
+    opacity: 1;
+    box-shadow: 0 0 12px 4px #fff;
+}
+
+.logo-titulo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 16px;
+    vertical-align: middle;
+    transition:
+        transform 0.4s cubic-bezier(.25,.8,.25,1),
+        box-shadow 0.4s cubic-bezier(.25,.8,.25,1),
+        filter 0.3s;
+    box-shadow: 0 2px 8px #0002;
+    cursor: pointer;
+    animation: pulseLogo 2s infinite;
+}
+
+@keyframes pulseLogo {
+    0% { filter: brightness(1) drop-shadow(0 0 0 #fff); }
+    50% { filter: brightness(1.15) drop-shadow(0 0 16px #fff); transform: scale(1.08) rotate(-2deg);}
+    100% { filter: brightness(1) drop-shadow(0 0 0 #fff); }
+}
+
+.logo-titulo:hover,
+.logo-titulo:focus {
+    transform: scale(1.25) rotate(-12deg);
+    box-shadow: 0 12px 36px #fff8, 0 4px 16px #0003;
+    filter: brightness(1.2) drop-shadow(0 0 24px #fff);
+    animation: none;
+}
+section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+body {
+    background-image: url('../imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+.pesquisa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    width: 20%;
+>>>>>>> ee77ec3624b8769664fe3046b5a8a7d2485b0e5d
 }
