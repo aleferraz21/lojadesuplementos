@@ -17,7 +17,8 @@ h1{
     gap: 10px;
 }
 .palavra-animada {
-    position: relative;
+    font-family: Arial-label;
+    position: flex;
     height: 1.2em;
     overflow: hidden;
 }
@@ -132,13 +133,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000;
+    color: #000000 !important; /* Fallback color */
+    color: rgba(0, 0, 0, 1) !important; /* Black with full opacity */
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     padding: 12px 0;
     border-radius: 8px;
-    background: #d80202;
+    background: #d80202 !important; /* Fallback color */
+    background: rgba(216, 2, 2, 1) !important; /* Red with full opacity */
     text-align: center;
     transition:
         color 0.3s,
@@ -157,25 +160,12 @@ nav ul li a {
     gap: 10px;
 }
 
-nav ul li a::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ffffff;
-    opacity: 0;
-    transition: opacity 0.3s, box-shadow 0.3s;
-}
-
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #121212;
-    background: #ffffff;
+    color: #121212 !important; /* Fallback color */
+    color: rgba(18, 18, 18, 0.7) !important; /* Dark gray with 70% opacity */
+    background: #ffffff !important; /* Fallback color */
+    background: rgba(255, 255, 255, 0.7) !important; /* White with 70% opacity */
     transform: scale(1.07) translateY(-2px);
     box-shadow: 0 8px 32px #ff980044;
     letter-spacing: 2px;
@@ -234,12 +224,85 @@ body {
 }
 .pesquisa-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 2px 0;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-    width: 20%;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    margin-top: 20px; /* Adiciona um espaço acima da barra de pesquisa */
+    width: 80%; /* Define a largura do container */
+    max-width: 600px; /* Define uma largura máxima */
+    margin-left: auto; /* Margem esquerda automática */
+    margin-right: auto; /* Margem direita automática */
+    border-radius: 25px; /* Arredonda as bordas */
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.pesquisa-container:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.search-bar {
+    flex: 1; /* Preenche o espaço disponível */
+    padding: 12px 20px;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    color: #333;
+    border-radius: 25px 0 0 25px; /* Arredonda as bordas à esquerda */
+    outline: none; /* Remove a borda ao clicar */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.search-bar:focus {
+    background-color: #fff; /* Muda a cor de fundo ao focar */
+}
+
+.search-button {
+    background-color: #d80202;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 0 25px 25px 0; /* Arredonda as bordas à direita */
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease; /* Transição suave para a cor de fundo e transformação */
+}
+
+.search-button:hover {
+    background-color: #c60303; /* Escurece a cor no hover */
+    transform: scale(1.05); /* Aumenta um pouco no hover */
+}
+
+.search-button i {
+    /* Estilos para o ícone de lupa (opcional) */
+    vertical-align: middle;
+}
+footer {
+    background-color: #d80202; /* Cor de fundo vermelha, similar aos links */
+    color: #fff; /* Cor do texto branca para contraste */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 20px; /* Adiciona um preenchimento interno */
+    margin-top: 20px; /* Adiciona um espaço acima do rodapé */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave no topo */
+    font-size: 0.9em; /* Reduz um pouco o tamanho da fonte */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+    letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
+}
+
+footer p {
+    margin: 0; /* Remove a margem padrão do parágrafo */
+}
+
+/* Estilos para o link de copyright (opcional) */
+footer a {
+    color: #fff; /* Cor do link branca */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado no hover */
 }

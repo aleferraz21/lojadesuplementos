@@ -45,8 +45,8 @@
         .botao-voltar {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #ffbb01; /* Amarelo */
-            color: #121212; /* Preto */
+            background-color: #ff0101; /* Amarelo */
+            color: #ffffff; /* Preto */
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1em;
@@ -75,28 +75,33 @@
         }
         
         .cartao-produto {
-            background-color: #1a1a1a;
+            background-color: #2b2b2b;
             border-radius: 10px;
-            padding: 25px;
+            padding: 2px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             border: 1px solid #333;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         .cartao-produto:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(255, 187, 1, 0.2);
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.2);
         }
 
         .cartao-produto h2, .cartao-produto h3 {
-            color: #ffbb01;
+            color: #e60000;
             margin-top: 0;
         }
 
         .cartao-produto h3 {
-            font-size: 1.2em;
-            color: #e0e0e0;
+            font-size: 1 em;
+            color: #ffffff;
         }
 
         .cartao-produto p {
@@ -119,16 +124,16 @@
 
         .cartao-produto ul li::before {
             content: '•';
-            color: #ffbb01; /* Amarelo */
-            font-size: 1.2em;
+            color: #ff0000; /* Amarelo */
+            font-size: 1.5em;
             position: absolute;
             left: 0;
         }
 
         .cartao-produto .preco {
-            font-size: 1.8em;
+            font-size: 1.5em;
             font-weight: bold;
-            color: #ffbb01;
+            color: #ffffff;
             margin-top: 20px;
         }
 
@@ -136,25 +141,26 @@
             display: flex;
             justify-content: center;
             margin: 20px 0;
+
         }
 
         .recipiente-imagem img {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
-            border-radius: 8px;
-            border: 2px solid #ffbb01;
+            border-radius: 10px;
+            border: 2px solid #000000;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .recipiente-imagem img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 2px rgba(255, 187, 1, 0.5);
+            transform: scale(1.5);
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
         }
 
         /* Estilos para o Rodapé */
         footer {
             background-color: #000000;
-            color: #e0e0e0;
+            color: #ffffff;
             text-align: center;
             padding: 20px;
             margin-top: auto;
@@ -172,4 +178,36 @@
                 padding: 15px;
             }
         }
+       /* Estilizando o contêiner de opções */
+.opcoes-produto {
+    margin-top: 10px; /* Adiciona um espaço acima do seletor */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do seletor */
+}
+
+/* Estilizando o seletor de sabores */
+.opcoes-produto select {
+    width: 100%; /* Faz com que o seletor ocupe a largura total do contêiner */
+    padding: 8px; /* Adiciona um preenchimento interno */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilizando o botão "Adicionar ao Carrinho" */
+.botao-carrinho {
+    width: 100%; /* Faz com que o botão ocupe a largura total do contêiner */
+    padding: 10px;
+    background-color: #ffffff; /* Cor azul de exemplo */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Muda o cursor para uma mãozinha */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.botao-carrinho:hover {
+    background-color: #e40000; /* Um azul mais escuro ao passar o mouse */
+}
     
